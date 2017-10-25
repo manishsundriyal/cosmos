@@ -14,9 +14,8 @@ class SinglyLinkedList<T> {
 		head = newNode; //Now set the new link to be the head
 	}
 
-	Node InsertNth(int data, int position) {
-
-		Node<Integer> newNode = new Node<>(data);
+	public Node insertNth(T data, int position) {
+		Node<T> newNode = new Node<>(data);
 
 		if (position == 0) {
 			newNode.next = head;
@@ -38,6 +37,18 @@ class SinglyLinkedList<T> {
 		Node temp = head;
 		head = head.next; //Make the second element in the list the new head, the Java garbage collector will later remove the old head
 		return temp;
+	}
+
+	public void reverse(){
+		head = reverseList(head);
+	}
+
+	private Node reverseList(Node node){
+		if (node == null || node.next == null) return node;
+		Node reversedHead = reverseList(node.next);
+		node.next.next = node;
+		node.next = null;
+		return reversedHead;
 	}
 
 	public boolean isEmpty() {

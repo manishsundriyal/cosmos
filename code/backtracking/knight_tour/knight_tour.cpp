@@ -1,3 +1,4 @@
+// Part of Cosmos by OpenGenus Foundation
 // C program for Knight Tour problem
 #include<stdio.h>
 #define N 8
@@ -86,7 +87,6 @@ int solveKTUtil(int x, int y, int movei, int sol[N][N],
              sol[next_x][next_y] = -1;// backtracking
        }
    }
-
    return false;
 }
 

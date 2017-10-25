@@ -1,5 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
-public class convert_number_binary {
+public class ConvertNumberBinary {
 	public static void main(String[] args) {
 		String binary = toBinary(20);
 		System.out.println(binary);
@@ -9,16 +9,16 @@ public class convert_number_binary {
 	}
 
 	public static String toBinary(int n) {
-		String binary = "";
+		StringBuilder binary = new StringBuilder("");
 		while (n > 0) {
 			if ((n&1) == 0)
-				binary = '0' + binary;
+				binary.append('0');
 			else
-				binary = '1' + binary;
+				binary.append('1');
 
 			n >>= 1;
 		}
-		return binary;
+		return binary.toString();
 	}
 
 	public static int toNumber(String s) {

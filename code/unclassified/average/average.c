@@ -1,4 +1,5 @@
 // Part of Cosmos by OpenGenus Foundation
+<<<<<<< HEAD
 // Average of the numbers in an array in C
 #include<stdio.h>
 #include<stdlib.h>
@@ -29,3 +30,23 @@ Input:
 1 2 3 4 5
 Output:
 3*/
+=======
+// Code written by Adeen Shukla (adeen-s)
+#include<stdio.h>
+
+int main() {
+	int n, sum = 0, tmp = 0, i;
+    
+    printf("Enter the total number of inputs : ");
+    scanf("%d", &n);
+	printf("\nEnter the numbers\n");
+    
+    for (i = 0; i < n; i++) {
+	   scanf("%d", &tmp);
+	   sum += tmp;		
+    }
+
+    float avg = (float) sum / n;
+    printf("\nAverage = %f\n", avg);
+}
+>>>>>>> upstream/master
